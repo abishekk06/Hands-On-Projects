@@ -2,21 +2,20 @@
 
 ## Prerequisites:
 
-    Provision three EC2 instances for configuring a master node and two worker nodes for Kubernetes    Cluster.
+Provision three EC2 instances for configuring a master node and two worker nodes for Kubernetes    Cluster.
 
-    or use the ec2instance.tf file provided to provision using terraform.
+or use the ec2instance.tf file provided to provision using terraform.
 
 ## Step 01: Install 
 
-    install docker on all nodes in your cluster. 
+install docker on all nodes in your cluster. 
 
-    I'm using Ubuntu Distribution for Linux.
+I'm using Ubuntu Distribution for Linux.
 
-    **Below commands can be used to install Docker:**
-
-      '''
-      sudo apt-get update
-      sudo apt-get install -y docker.io
+**Below commands can be used to install Docker:**
+    
+    sudo apt-get update
+    sudo apt-get install -y docker.io
 
 ## Step 2: Install Kubeadm
 
