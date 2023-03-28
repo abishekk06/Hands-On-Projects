@@ -12,8 +12,8 @@ I'm using Ubuntu Distribution for Linux.
 
 **Below commands can be used to install Docker:**
     
-    sudo apt-get update
-    sudo apt-get install -y docker.io
+    $ sudo apt-get update
+    $ sudo apt-get install -y docker.io
 
 ## Step 2: Install Kubeadm
 
@@ -21,16 +21,21 @@ Install Kubeadm for the master node by following the documentation for your linu
 
 **Below command can be used to install Kubeadm**
 
-    sudo apt-get update
-    sudo apt-get install -y apt-transport-https curl
-    curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
-    echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
-    sudo apt-get update
-    sudo apt-get install -y kubelet kubeadm kubectl
+    $ sudo apt-get update
+    $ sudo apt-get install -y apt-transport-https curl
+    $ curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+    $ echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+    $ sudo apt-get update
+    $ sudo apt-get install -y kubelet kubeadm kubectl
 
 ## Step 3: Initialize Cluster
 
-**Use the below command to initialize cluster**
+Initializing the pod-network with CIDR Rage of 192.168.0.0/16
+
+**Use the below command to initialize Cluster**
 
     $ sudo kubeadm init --pod-network-cidr=192.168.0.0/16
+
+Once the cluster is initialized, save the generated join command which can to used to join worker nodes to the cluster.
+    
 
