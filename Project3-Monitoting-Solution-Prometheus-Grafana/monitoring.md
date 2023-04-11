@@ -1,4 +1,4 @@
-# Prometheus and Grafana for The Ultimate Monitoring and Visualization Experience
+# Prometheus and Grafana for Monitoring and Visualization
 
 Using these Tools we can Monitor Resources like  Cpu usage,Container and your Application performance and Network traffic, server and application health and You can Even Create Your Own Custom metrics.
 
