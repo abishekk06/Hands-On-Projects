@@ -30,7 +30,7 @@ sudo hostnamectl set-hostname master
 sudo hostnamectl set-hostname targer1
 sudo hostnamectl set-hostname targer2
 ```
-Note: Type `bash` for immediate effect, if the hostname is diff after restarting the server, it's because the hostname was ser only in the shell. To make the hostname persistant, add it into the etc/hosts file.
+Note: Type `bash` for immediate effect, if the hostname is diff after restarting the server, it's because the hostname was set only in the shell. To make the hostname persistant, add it into the etc/hosts file.
 
 Add its own instance IP and hostname for each machine.
 
@@ -49,4 +49,45 @@ Now move the Node Exporter binary to /usr.local/bin
 sudo mv node_exporter-1.5.0.linux-amd64/node_exporter  /usr/local/bin
 rm -rv node_exporter-1.5.0.linux-amd64*
 ```
+
+## Step 3:
+
+Now we create users and service files for Node_Exporter.
+
+```
+sudo useradd -rs /bin/false node_exporter
+```
+
+When we run this command, a new user accout named `node_exporter` is created. The default shell for this acc is set to "/bin/false" which means that user cannot log in to the account.
+
+```
+sudo cat /etc/passwd | grep node_exporter
+```
+
+Now we will create a **systemd unit** so that the node-explorer can start at boot.
+
+```
+sudo cat <<EOF | sudo tee /etc/systemd/system/node_exporter.service
+[Unit]
+Description=Node Exporter
+After=network.target
+
+[Service]
+User=node_exporter
+Group=node_exporter
+Type=simple
+ExecStart=/usr/local/bin/node_exporter
+
+[Install]
+WantedBy=multi-user.target
+EOF
+```
+
+This is to be added to  the "node_exporter.service" file. This systemd unit file sets up to service to run the node_exporter user, and starts the "/usr/local/bin/node_exporter"
+
+```
+sudo cat /etc/systemd/system/node_exporter.service
+```
+
+Use it to check if the file is created and the content is added.
 
