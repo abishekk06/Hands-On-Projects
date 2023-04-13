@@ -215,3 +215,26 @@ WantedBy=multi-user.target
 EOF
 ```
 
+[Unit]:
+Provides metadata about the service
+**Description=Prometheus** sets the name of the service to “Prometheus”
+**After=network.target** specifies that the service should start after the network is available
+
+[Service]:
+Defines how the service should be managed by systemd
+**User=prometheus** specifies that the service should run as the “prometheus” user
+**Group=prometheus** specifies that the service should run as the “prometheus” group
+**Type=simple** specifies that the service should be run as a simple process
+**ExecStart=/usr/local/bin/prometheus** specifies the location of the Prometheus binary that should be run
+— **config.file /etc/prometheus/prometheus.yml** specifies the location of the Prometheus configuration file
+— **storage.tsdb.path /var/lib/prometheus/** specifies the location of the storage directory where Prometheus should store its data
+— **web.console.templates=/etc/prometheus/consoles** specifies the location of the directory containing the web console templates
+— **web.console.libraries=/etc/prometheus/console_libraries** specifies the location of the directory containing the web console libraries
+
+[Install]:
+Specifies when the service should be started and which system target should be associated with
+**WantedBy=multi-user.target** specifies that the service should be started when the system is in the multi-user target.
+
+```
+sudo ls -l /etc/systemd/system/prometheus.service
+```
