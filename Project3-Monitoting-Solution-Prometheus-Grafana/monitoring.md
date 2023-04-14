@@ -238,3 +238,20 @@ Specifies when the service should be started and which system target should be a
 ```
 sudo ls -l /etc/systemd/system/prometheus.service
 ```
+
+Now reload the system and enable prometheus
+
+```
+sudo systemctl daemon-reload && sudo systemctl enable prometheus
+```
+
+```
+sudo systemctl start prometheus && sudo systemctl status prometheus.service --no-pager
+```
+
+Now try accessing the same
+
+```
+http://<ip-address>:9090
+```
+
