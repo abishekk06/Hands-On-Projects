@@ -63,7 +63,9 @@ To store the code that you'll be writing, you can create your very own GitHub ac
 
 1. AWS - Configure AWS Credentials for the user at programmatic level(SDK, CLI, Terraform, etc,.)
 
-2. VPC - When running EKS, it requires specific networking. Because all environments will most likely be different, we can use this cloudformation [template](https://s3.us-west-2.amazonaws.com/amazon-eks/cloudformation/2020-10-29/amazon-eks-vpc-private-subnets.yaml). more on this.
+2. VPC - When running EKS, it requires specific networking. Because all environments will most likely be different, we can use this cloudformation [template](https://s3.us-west-2.amazonaws.com/amazon-eks/cloudformation/2020-10-29/amazon-eks-vpc-private-subnets.yaml), more.
 
 3. Terraform - The purpose of the Terraform section is to create all of the AWS cloud services we need from an environment/infrastructure perspective to run the application.
-
+ - [create S3 to store tfstate file](https://github.com/abishekk06/Hands-On-Projects/blob/main/Project2-DevOps-Realtime/Terraform-AWS-Creation/create-s3-store-tfstate-file.md)
+ - [Create an Elastic Container Registry](https://github.com/abishekk06/Hands-On-Projects/blob/main/Project2-DevOps-Realtime/Terraform-AWS-Creation/create-ecr.md)
+ 
