@@ -67,5 +67,5 @@ To store the code that you'll be writing, you can create your very own GitHub ac
 
 3. Terraform - The purpose of the Terraform section is to create all of the AWS cloud services we need from an environment/infrastructure perspective to run the application.
  - [create S3 to store tfstate file](https://github.com/abishekk06/Hands-On-Projects/blob/main/Project2-DevOps-Realtime/Terraform-AWS-Creation/create-s3-store-tfstate-file.md)
- - [Create an Elastic Container Registry](https://github.com/abishekk06/Hands-On-Projects/blob/main/Project2-DevOps-Realtime/Terraform-AWS-Creation/create-ecr.md)
-
+ - [create an Elastic Container Registry](https://github.com/abishekk06/Hands-On-Projects/blob/main/Project2-DevOps-Realtime/Terraform-AWS-Creation/create-ecr.md)
+ - [create An EKS Cluster IAM Role and Policy for EKS]()
