@@ -68,4 +68,9 @@ To store the code that you'll be writing, you can create your very own GitHub ac
 3. Terraform - The purpose of the Terraform section is to create all of the AWS cloud services we need from an environment/infrastructure perspective to run the application.
  - [create S3 to store tfstate file](https://github.com/abishekk06/Hands-On-Projects/blob/main/Project2-DevOps-Realtime/Terraform-AWS-Creation/create-s3-store-tfstate-file.md)
  - [create an Elastic Container Registry](https://github.com/abishekk06/Hands-On-Projects/blob/main/Project2-DevOps-Realtime/Terraform-AWS-Creation/create-ecr.md)
- - [create An EKS Cluster IAM Role and Policy for EKS]()
+ - [create an EKS Cluster IAM Role and Policy for EKS](https://github.com/abishekk06/Hands-On-Projects/blob/main/Project2-DevOps-Realtime/Terraform-AWS-Creation/create-eks-iam-role-and-policy.md)
+ - [create an EKS Cluster](https://github.com/abishekk06/Hands-On-Projects/blob/main/Project2-DevOps-Realtime/Terraform-AWS-Creation/create-eks-iam-role-and-policy.md)
+
+ 4. Docker - The purpose of the Docker is to create a Docker image from the app that the organization is running on-prem, containerize it, and store the container inside of a container repository - AWS ECR.
+ - [create a Docker Image](https://github.com/abishekk06/Hands-On-Projects/blob/main/Project2-DevOps-Realtime/Docker/create-docker-image.md)
+ - [login to AWS ECR Repository](https://github.com/abishekk06/Hands-On-Projects/blob/main/Project2-DevOps-Realtime/Docker/push-image-to-ecr-repo.md)
